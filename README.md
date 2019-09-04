@@ -5,9 +5,10 @@
 
 ## Installed Packages     
 1. install impotant packages 
-    * npm i node-spotify-api  => https://www.npmjs.com/package/node-spotify-api 
-    * npm i axios             => https://www.npmjs.com/package/axios
-    * npm i moment            => https://www.npmjs.com/package/moment
-    * npm i dotenv            => https://www.npmjs.com/package/dotenv
+    * npm i node-spotify-api  [Spotify](https://www.npmjs.com/package/node-spotify-api)
+    * npm i axios             [Axios](https://www.npmjs.com/package/axios)
+    * npm i moment            [Moment.js](https://www.npmjs.com/package/moment)
+    * npm i dotenv            [dotenv](https://www.npmjs.com/package/dotenv
 2. isntall other packages 
-    * npm i request           => https://www.npmjs.com/package/request
+    * npm i request           [request](https://www.npmjs.com/package/request)
+
