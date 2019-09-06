@@ -33,7 +33,7 @@ var axiosQueryURL = `http://www.omdbapi.com/?t=${userQuery}&y=&plot=short&apikey
 const movieThis = () => {
   axios
     .get(axiosQueryURL)
-    .then(response => {
+    .then(response = () => {
       // handle success
       // console.log(response); // get all reponse and dig in
       // console.log(response.data); // get specific object called data and dig in for relevant info
@@ -58,11 +58,9 @@ const movieThis = () => {
       console.log(`Plot: ${moviePlot}`);
       console.log(`Actors: ${movieActors}`);
     
-
-
       // message the user the following information when searh for movie topic inititiated
     })
-    .catch(error => {
+    .catch(error = () => {
       // handle error
       console.log(error);
     });
