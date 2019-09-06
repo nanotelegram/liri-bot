@@ -2,10 +2,10 @@
 require("dotenv").config();
 
 // get API keys from .env
-var spotifyID = process.env.SPOTIFY_ID;
-var spotifySecret = process.env.SPOTIFY_SECRET;
-var omdbKey = process.env.OMDB_APIKEY;
-var bitKey = process.env.BIT_APP_ID;
+const spotifyID = process.env.SPOTIFY_ID;
+const spotifySecret = process.env.SPOTIFY_SECRET;
+const omdbKey = process.env.OMDB_APIKEY;
+const bitKey = process.env.BIT_APP_ID;
 // test API keys if exported succesffully
 // console.log(spotifyID);
 // console.log(spotifySecret);
