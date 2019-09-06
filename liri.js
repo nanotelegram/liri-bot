@@ -29,11 +29,24 @@ let userQuery = process.argv.slice(3).join(" ");
 // console.log(userInput);
 // console.log(userQuery);
 
-var axiosQueryURL = `http://www.omdbapi.com/?t=${userQuery}&y=&plot=short&apikey=${omdbKey}`;
+// This functions takes user commands line input e.g movie-this Thor
+const commandLineInputs = () => {
+  switch (userInput) {
+    case "movie-this":
+      movieThis();
+      break;
+    default:
+      console.log(
+        "Pleae follow instruction on how to properly querry Liri App"
+      );
+  }
+};
+
 const movieThis = () => {
+  var axiosQueryURL = `http://www.omdbapi.com/?t=${userQuery}&y=&plot=short&apikey=${omdbKey}`;
   axios
     .get(axiosQueryURL)
-    .then(response = () => {
+    .then(response => {
       // handle success
       // console.log(response); // get all reponse and dig in
       // console.log(response.data); // get specific object called data and dig in for relevant info
@@ -47,23 +60,25 @@ const movieThis = () => {
       let moviePlot = response.data.Plot;
       let movieActors = response.data.Actors;
 
-      // dipslay message to the user when query intitiated 
-      console.log(`\n YOU SEARCHED FOR MOVIE =>  ${userQuery}`);
-      console.log(`Movie Title: ${movieTitle}`);
-      console.log(`Year: ${movieYear}`);
-      console.log(`IMDB Rating: ${movieIMDBRating}`);
-      console.log(`Rotten Tomatoes Rating: ${movieRottenTomatoesRating}`);
-      console.log(`Country Produced: ${movieCountryProduced}`);
-      console.log(`Language: ${movieLanguage}`);
-      console.log(`Plot: ${moviePlot}`);
-      console.log(`Actors: ${movieActors}`);
-    
+      // dipslay message to the user when query intitiated
+      console.log(`\n\t\t=> YOU SEARCHED FOR MOVIE "${userQuery}"`);
+      console.log(`\t\t=> LIRI HAS FOUND FOR YOU THE FOLLOWING RESULTS:\n`)
+      console.log(`Movie Title:_____________  ${movieTitle}`);
+      console.log(`Year:____________________  ${movieYear}`);
+      console.log(`IMDB Rating:_____________  ${movieIMDBRating}`);
+      console.log(`Rotten Tomatoes Rating:__  ${movieRottenTomatoesRating}`);
+      console.log(`Country Produced:________  ${movieCountryProduced}`);
+      console.log(`Language:________________  ${movieLanguage}`);
+      console.log(`Plot:____________________  ${moviePlot}`);
+      console.log(`Actors:__________________  ${movieActors}`);
+
       // message the user the following information when searh for movie topic inititiated
     })
-    .catch(error = () => {
+    .catch(error => {
       // handle error
       console.log(error);
     });
 };
 
-movieThis();
+// RUN APP HERE 
+commandLineInputs();
