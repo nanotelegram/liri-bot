@@ -92,10 +92,10 @@ const spotifyThis = () => {
       // dipslay message to the user when query intitiated
       console.log(`\n\t\t=> YOU SEARCHED FOR SONG "${userQuery}" IN SPOTIFY`);
       console.log(`\t\t=> LIRI HAS FOUND FOR YOU THE FOLLOWING RESULTS:\n`);
-      console.log(`Artist Name: ${artistName}`);
-      console.log(`Songe Name: ${songName}`);
-      console.log(`Spotify Link ${songPreivewLink}`);
-      console.log(`Song Album ${songAlbum}\n`);
+      console.log(`Artist Name:____ ${artistName}`);
+      console.log(`Songe Name:_____ ${songName}`);
+      console.log(`Spotify Link:___ ${songPreivewLink}`);
+      console.log(`Song Album:_____ ${songAlbum}\n`);
     }
   });
 };
