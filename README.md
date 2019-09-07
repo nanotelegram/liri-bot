@@ -13,3 +13,13 @@
 2. isntall other packages 
     * npm i request           [request](https://www.npmjs.com/package/request)
 
+
+## Insruction on how to run Liri Bot 
+1. type in the command line:
+    * concert-this your band name
+    * movie-this  your movie name
+    * spotify-this your song name
+
+2. Examples 
+    * movie-this Avengers: 
+    ![movie-this](/results-example/movie-this-avengers.png)

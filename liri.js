@@ -21,9 +21,9 @@ const moment = require("moment");
 const Spotify = require("node-spotify-api");
 const fs = require("fs");
 
-// take use command and input
-let userInput = process.argv[2];
-let userQuery = process.argv.slice(3).join(" ");
+// take user command and input from the command line 
+let userInput = process.argv[2]; //  take predefined commands e.g. movie-this
+let userQuery = process.argv.slice(3).join(" "); // take seached topic e.g movie-this Thor
 
 // Test
 // console.log(userInput);
@@ -35,15 +35,34 @@ const commandLineInputs = () => {
     case "movie-this":
       movieThis();
       break;
+    case 'concert-this':
+      concertThis();
+      break;
     default:
-      console.log(
-        "Pleae follow instruction on how to properly querry Liri App"
-      );
+      console.log("Pleae see instructions on how to querry Liri App");
   }
 };
 
+const concertThis = () => {
+  var banddsInTownURL = `https://rest.bandsintown.com/artists/${userQuery}/events?app_id=${bitKey}`; 
+  // use axios node package to make http request from Bands In Town 
+  axios.get(banddsInTownURL)
+  .then(function (response) {
+    // handle success
+    console.log('Connected To Bands In Town!');
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+
+}
+
 const movieThis = () => {
   var axiosQueryURL = `http://www.omdbapi.com/?t=${userQuery}&y=&plot=short&apikey=${omdbKey}`;
+  // use axios node package to make http request from AMDB 
+  // note: axios atomtically transforms for JSON data 
   axios
     .get(axiosQueryURL)
     .then(response => {
@@ -72,7 +91,6 @@ const movieThis = () => {
       console.log(`Plot:____________________  ${moviePlot}`);
       console.log(`Actors:__________________  ${movieActors}`);
 
-      // message the user the following information when searh for movie topic inititiated
     })
     .catch(error => {
       // handle error
@@ -82,3 +100,4 @@ const movieThis = () => {
 
 // RUN APP HERE 
 commandLineInputs();
+
