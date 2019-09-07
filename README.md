@@ -28,7 +28,7 @@
 
 2. Examples
      * spotify-this Badfish: 
-    ![spotify-this](/results-example/spotif-this-badfish.png)
+    ![spotify-this](/results-example/spotify-this-badfish.png)
 
     * movie-this Avengers: 
     ![movie-this](/results-example/movie-this-avengers.png)
