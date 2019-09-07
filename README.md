@@ -14,8 +14,14 @@
     * npm i request           [request](https://www.npmjs.com/package/request)
 
 
-## Insruction on how to run Liri Bot 
-1. type in the command line:
+## Insruction on how to run Liri App
+1. Before to run this app, you should inlclude your following key credentials in your .env file
+    * const spotifyID = process.env.YOUR_SPOTIFY_ID;
+    * const spotifySecret = process.env.YOUR_SPOTIFY_SECRET;
+    * const omdbKey = process.env.YOUR_OMDB_APIKEY;
+    * const bitKey = process.env.YOUR_BIT_APP_ID;
+
+2. type in the command line:
     * concert-this your band name
     * movie-this  your movie name
     * spotify-this your song name
