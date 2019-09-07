@@ -26,6 +26,9 @@
     * movie-this  your movie name
     * spotify-this your song name
 
-2. Examples 
+2. Examples
+     * spotify-this Badfish: 
+    ![spotify-this](/results-example/spotif-this-badfish.png)
+
     * movie-this Avengers: 
     ![movie-this](/results-example/movie-this-avengers.png)

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testing API connections and visualizing objects </title>
+</head>
+
+<body>
+    <script>
+
+       var userQuery = 'Anthony Kiedis';
+        var bitKey = 'eeec0547e81c9e407b39360643f0f2c3';
+        var banddsInTownURL = `https://rest.bandsintown.com/artists/${userQuery}/events?app_id=${bitKey}`;
+        // use axios node package to make http request from Bands In Town 
+        axios.get(banddsInTownURL)
+            .then(function (response) {
+                // handle success
+                console.log('Connected To Bands In Town!');
+                console.log(response);
+                console.log(response.host);
+                console.log(response.accept);
+
+
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
+    </script>
+</body>
+
+</html>
