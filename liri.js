@@ -69,7 +69,34 @@ const concertThis = () => {
     .get(banddsInTownURL)
     .then(function(response) {
       // handle success
-      console.log(response);
+      // console.log(response);
+      // object name
+      // console.log(response.data[0]);
+      let thisData = response.data[0]; // the data object we need to retrieve relevant information
+
+      let venueName = thisData.venue.name;
+      let venueCountry =thisData.venue.country;
+      let venueRegion = thisData.venue.region;
+      let venueCity = thisData.venue.city;
+      let venueData = moment(thisData.datetime).format("MM/DD/YYYY"); // user moment package to format day ouput 
+
+      // console.log(venueName);
+      // console.log(venueCountry);
+      // console.log(venueRegion);
+      // console.log(venueCity);
+      // console.log(venueData);
+
+      // dipslay message to the user when query intitiated
+      console.log(`\n\t\t=> YOU SEARCHED FOR BAND "${userQuery}" IN BANDS IN TOWN`);
+      console.log(`\t\t=> LIRI HAS FOUND FOR YOU THE FOLLOWING RESULTS:\n`);
+      console.log(`Venue Name:_____ ${venueName}`);
+      console.log(`Country:________ ${venueCountry}`);
+      console.log(`Region:_________ ${venueRegion}`);
+      console.log(`City:___________ ${venueCity}`);
+      console.log(`Date:___________ ${venueData}\n`);
+
+
+
     })
     .catch(function(error) {
       // handle error
