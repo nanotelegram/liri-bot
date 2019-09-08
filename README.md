@@ -28,8 +28,8 @@
 
 2. Examples
     * cocert-this Lady Gaga: 
-    ![spotify-this](/results-example/concert-this-lday-gaga.png)
-    
+    ![spotify-this](/results-example/concert-this-lady-gaga.png)
+
     * spotify-this Badfish: 
     ![spotify-this](/results-example/spotify-this-badfish.png)
 
