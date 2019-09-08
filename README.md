@@ -26,7 +26,7 @@
     * movie-this  your movie name
     * spotify-this your song name
     * do-what-it-says see note-1
-    note-1: (do-what-it-says command will query the content from random.txt and spotify the name of the song in the file)
+     - note-1: (do-what-it-says command will query the content from random.txt and spotify the name of the song in the file)
 
 2. Examples
     * cocert-this Lady Gaga 
