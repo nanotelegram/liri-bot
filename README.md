@@ -36,5 +36,5 @@
     * movie-this Avengers
     ![movie-this](/results-example/movie-this-avengers.png)
 
-    * do-this Lady Gaga 
+    * do-what-it-says 
     ![spotify-this](/results-example/do-this.png)
