@@ -62,6 +62,21 @@ const commandLineInputs = () => {
 //     });
 // };
 
+const concertThis = () => {
+  // Make a request for a user with a given ID
+  var banddsInTownURL = `https://rest.bandsintown.com/artists/${userQuery}/events?app_id=codingbootcamp`;
+  axios
+    .get(banddsInTownURL)
+    .then(function(response) {
+      // handle success
+      console.log(response);
+    })
+    .catch(function(error) {
+      // handle error
+      console.log(error);
+    })   
+};
+
 const spotifyThis = () => {
   var spotify = new Spotify({
     id: spotifyID,
@@ -137,6 +152,8 @@ const movieThis = () => {
       console.log(error);
     });
 };
+
+
 
 // RUN APP HERE
 commandLineInputs();
