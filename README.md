@@ -27,11 +27,11 @@
     * spotify-this your song name
 
 2. Examples
-    * cocert-this Lady Gaga: 
+    * cocert-this Lady Gaga 
     ![spotify-this](/results-example/concert-this-lady-gaga.png)
 
-    * spotify-this Badfish: 
+    * spotify-this Badfish 
     ![spotify-this](/results-example/spotify-this-badfish.png)
 
-    * movie-this Avengers: 
+    * movie-this Avengers
     ![movie-this](/results-example/movie-this-avengers.png)
