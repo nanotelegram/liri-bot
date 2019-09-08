@@ -41,6 +41,9 @@ const commandLineInputs = () => {
     case "movie-this":
       movieThis();
       break;
+    case "do-what-it-says":
+      doWhat();
+      break;
     default:
       console.log("Pleae see instructions on how to querry Liri App");
   }
@@ -180,6 +183,32 @@ const movieThis = () => {
     });
 };
 
+const doWhat = () => {
+  // grab values from the file  random.txt and feed to userInput and useQuery 
+  fs.readFile('random.txt', 'utf8', (err, res) => {
+    if (err) {
+      console.log("Reading file uncessfull");
+    } else {
+
+        //console.log(res.length); // get the length of all characters in the file
+        
+        // get a file data and seperate it by a comma and assign each peace of data to an index
+        let fileData = res.split(','); 
+
+        // test if file data is seperating data by a comma 
+        // console.log(fileData);
+        userInput = fileData[0];
+        userQuery = fileData[1];
+
+        // console.log(userInput);
+        // console.log(userQuery);
+
+        // connect to spotify and search for the song name inside random.txt file 
+        spotifyThis();
+        //note: now you may replace spotifyThis() with others commands e.g. movieThis(), etc.
+    }
+  });
+}
 
 
 // RUN APP HERE
