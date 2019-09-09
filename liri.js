@@ -29,7 +29,7 @@ let userQuery = process.argv.slice(3).join(" "); // take seached topic e.g movie
 // console.log(userInput);
 // console.log(userQuery);
 
-// This functions takes user commands line input e.g movie-this Thor
+// This functions takes user commands line input e.g. movie-this Thor
 const commandLineInputs = () => {
   switch (userInput) {
     case "concert-this":
@@ -121,7 +121,7 @@ const spotifyThis = () => {
       console.log(`\n\t\t=> YOU SEARCHED FOR SONG "${userQuery}" IN SPOTIFY`);
       console.log(`\t\t=> LIRI HAS FOUND FOR YOU THE FOLLOWING RESULTS:\n`);
       console.log(`Artist Name:____ ${artistName}`);
-      console.log(`Songe Name:_____ ${songName}`);
+      console.log(`Song Name:_____ ${songName}`);
       console.log(`Spotify Link:___ ${songPreivewLink}`);
       console.log(`Song Album:_____ ${songAlbum}\n`);
     }
