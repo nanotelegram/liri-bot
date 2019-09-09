@@ -16,7 +16,7 @@ liri-bot queries user's searches based on 4 predefined commands, e.g. concert-th
     * npm i axios             [Axios](https://www.npmjs.com/package/axios)
     * npm i moment            [Moment.js](https://www.npmjs.com/package/moment)
     * npm i dotenv            [dotenv](https://www.npmjs.com/package/dotenv)
-2. isntall other packages 
+2. Isntall other packages 
     * npm i request           [request](https://www.npmjs.com/package/request)
 
 

@@ -170,7 +170,7 @@ const doWhat = () => {
   // grab values from the file  random.txt and feed to userInput and useQuery
   fs.readFile("random.txt", "utf8", (err, res) => {
     if (err) {
-      console.log("Reading file uncessfull");
+      console.log("Reading file random.txt uncessfull");
     } else {
       //console.log(res.length); // get the length of all characters in the file
 
