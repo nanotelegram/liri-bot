@@ -78,10 +78,10 @@ const concertThis = () => {
       let thisData = response.data[0]; // the data object we need to retrieve relevant information
 
       let venueName = thisData.venue.name;
-      let venueCountry =thisData.venue.country;
+      let venueCountry = thisData.venue.country;
       let venueRegion = thisData.venue.region;
       let venueCity = thisData.venue.city;
-      let venueData = moment(thisData.datetime).format("MM/DD/YYYY"); // user moment package to format day ouput 
+      let venueData = moment(thisData.datetime).format("MM/DD/YYYY"); // user moment package to format day ouput
 
       // console.log(venueName);
       // console.log(venueCountry);
@@ -90,21 +90,20 @@ const concertThis = () => {
       // console.log(venueData);
 
       // dipslay message to the user when query intitiated
-      console.log(`\n\t\t=> YOU SEARCHED FOR BAND "${userQuery}" IN BANDS IN TOWN`);
+      console.log(
+        `\n\t\t=> YOU SEARCHED FOR BAND "${userQuery}" IN BANDS IN TOWN`
+      );
       console.log(`\t\t=> LIRI HAS FOUND FOR YOU THE FOLLOWING RESULTS:\n`);
       console.log(`Venue Name:_____ ${venueName}`);
       console.log(`Country:________ ${venueCountry}`);
       console.log(`Region:_________ ${venueRegion}`);
       console.log(`City:___________ ${venueCity}`);
       console.log(`Date:___________ ${venueData}\n`);
-
-
-
     })
     .catch(function(error) {
       // handle error
       console.log(error);
-    })   
+    });
 };
 
 const spotifyThis = () => {
@@ -184,32 +183,30 @@ const movieThis = () => {
 };
 
 const doWhat = () => {
-  // grab values from the file  random.txt and feed to userInput and useQuery 
-  fs.readFile('random.txt', 'utf8', (err, res) => {
+  // grab values from the file  random.txt and feed to userInput and useQuery
+  fs.readFile("random.txt", "utf8", (err, res) => {
     if (err) {
       console.log("Reading file uncessfull");
     } else {
+      //console.log(res.length); // get the length of all characters in the file
 
-        //console.log(res.length); // get the length of all characters in the file
-        
-        // get a file data and seperate it by a comma and assign each peace of data to an index
-        let fileData = res.split(','); 
+      // get a file data and seperate it by a comma and assign each peace of data to an index
+      let fileData = res.split(",");
 
-        // test if file data is seperating data by a comma 
-        // console.log(fileData);
-        userInput = fileData[0];
-        userQuery = fileData[1];
+      // test if fileData is seperating data by a comma
+      // console.log(fileData);
+      userInput = fileData[0];
+      userQuery = fileData[1];
 
-        // console.log(userInput);
-        // console.log(userQuery);
+      // console.log(userInput);
+      // console.log(userQuery);
 
-        // connect to spotify and search for the song name inside random.txt file 
-        spotifyThis();
-        //note: now you may replace spotifyThis() with others commands e.g. movieThis(), etc.
+      // connect to spotify and search for the song name inside random.txt file
+      spotifyThis();
+      //note: now you may replace spotifyThis() with others commands e.g. movieThis(), etc.
     }
   });
-}
-
+};
 
 // RUN APP HERE
 commandLineInputs();
