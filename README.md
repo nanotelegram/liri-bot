@@ -36,9 +36,11 @@ liri-bot queries user's searches based on 4 predefined commands, e.g. concert-th
 
 2. Examples
     * cocert-this Lady Gaga 
+    * cocert-this Lady Maroon 5 
     ![spotify-this](/results-example/concert-this-lady-gaga.png)
 
-    * spotify-this Badfish 
+    * spotify-this Badfish
+    * spotify-this Give It Away
     ![spotify-this](/results-example/spotify-this-badfish.png)
 
     * movie-this Avengers
