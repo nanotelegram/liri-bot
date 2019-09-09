@@ -45,7 +45,7 @@ const commandLineInputs = () => {
       doWhat();
       break;
     default:
-      console.log("Pleae see instructions on how to querry Liri App");
+      console.log("Pleae see the instruction on how to querry Liri App");
   }
 };
 
