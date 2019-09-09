@@ -1,8 +1,8 @@
 # liri-bot Applicaton 
 
 ## Summary 
-liri-bot is an application is built based on Node.js®, a JavaScript runtime built on Chrome's V8 JavaScript engine.
-liri-bot queries user's searches based on 4 predefined commands, e.g. concert-this, movie-this, spotify-this and do-what-it-says
+Liri Bot is an application built based on Node.js®, which is a JavaScript runtime built on Chrome's V8 JavaScript engine.
+Liri Bot queries user's searches based on 4 predefined commands, e.g. concert-this, movie-this, spotify-this and do-what-it-says
 
 ## Developers Environment and Pakcages Info On liri-bot
 
