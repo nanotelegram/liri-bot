@@ -49,22 +49,6 @@ const commandLineInputs = () => {
   }
 };
 
-// const concertThis = () => {
-//   var banddsInTownURL = `https://rest.bandsintown.com/artists/${userQuery}/events?app_id=${bitKey}`;
-//   // use axios node package to make http request from Bands In Town
-//   axios
-//     .get(banddsInTownURL)
-//     .then(function(res) {
-//       // handle success
-//       console.log("Connected To Bands In Town!");
-//       console.log(res.length);
-//     })
-//     .catch(function(error) {
-//       // handle error
-//       console.log(error);
-//     });
-// };
-
 const concertThis = () => {
   // Make a request for a user with a given ID
   var banddsInTownURL = `https://rest.bandsintown.com/artists/${userQuery}/events?app_id=codingbootcamp`;
